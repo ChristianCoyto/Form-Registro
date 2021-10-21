@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background: #fe0707;
+}
+
+form{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 10px auto;
+  box-shadow: 7px 6px 4px rgb(0 0 0 / 24%);
+  padding: 28px;
+}
+
+form .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #b30000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+form .form{
+  width: 100%;
+}
+
+form .form .container_input{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+form .form .container_input label{
+   width: 200px;
+   color: #757575;
+  font-size: 14px;
+}
+
+.container_input_sex{
+  justify-content: space-evenly;
+  margin: 9px 0 9px;
+}
+
+form .form .container_input label.sex-label{
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15px;
+  position: relative;
+}
+
+form .form .container_input .sex-label input[type="radio"]{
+  position: absolute;
+  top: 1px;
+  left: 68%;
+  opacity: 0;
+}
+
+
+/* ..............SELECTOR MASCULINO................*/
+
+
+form .form .container_input .sex-label .checkradio1{
+  width: 13px;
+  height: 13px;
+  border: 1px solid red;
+  border-radius: 100%;
+  display: block;
+  position: relative;
+  left: -13px;
+}
+
+form .form .container_input .sex-label .checkradio1:before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid red;
+  border-radius: 100%; 
+  display: none;
+}
+
+form .form .container_input .sex-label input[type="radio"]:checked ~ .checkradio1{
+  border: 2px solid #fff;
+  background-color: rgb(255, 0, 0);
+}
+
+form .form .container_input .sex-label input[type="radio"]:checked ~ .checkradio1:before{
+  display: block;
+}
+
+
+/* ................SELECTOR FEMENINO.................. */
+
+
+form .form .container_input .sex-label .checkradio2{
+  width: 13px;
+  height: 13px;
+  border: 1px solid red;
+  border-radius: 100%;
+  display: block;
+  position: relative;
+  left: -13px;
+}
+
+form .form .container_input .sex-label .checkradio2:before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid red;
+  border-radius: 100%; 
+  display: none;
+}
+
+form .form .container_input .sex-label input[type="radio"]:checked ~ .checkradio2{
+  border: 2px solid #fff;
+  background-color: rgb(255, 0, 0);
+}
+
+form .form .container_input .sex-label input[type="radio"]:checked ~ .checkradio2:before{
+  display: block;
+}
+
+form .form .container_input .input{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+form .form .container_input .input:focus{
+  border: 1px solid #fe0707;
+}
+
+form .form .container_input p{
+   font-size: 14px;
+   color: #757575;
+}
+form .form .container_input .label-terms{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.terms{
+  margin: 35px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form .form .container_input .label-terms input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+form .form .container_input .label-terms .checkmark{
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  border: 1px solid #fe0707;
+  display: block;
+  position: relative;
+}
+
+form .form .container_input .label-terms .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+}
+
+form .form .container_input .label-terms input[type="checkbox"]:checked ~ .checkmark{
+  background: #fe0707;
+}
+
+form .form .container_input .label-terms input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+form .form .container_input .btn{
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 25px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fe0709;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+form .form .container_input .btn:hover{
+  background: #ff3737;
+}
+
+form .form .container_input:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  
+  div.terms{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:330px){
+
+  div.terms{
+    flex-direction: column-reverse;
+  }
+
+  form .form .container_input p{
+    margin-bottom: 10px;
+  }
+
+}

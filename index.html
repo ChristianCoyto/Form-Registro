@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario-Registro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <form>
+    <div class="title">
+      Registration Form
+    </div>
+    <div class="form">
+      <div class="container_input">
+        <label for="nombre" >Nombre</label>
+        <input id="nombre" type="text" class="input">
+      </div>
+      <div class="container_input">
+        <label for="apellido" >Apellido</label>
+        <input id="apellido" type="text" class="input">
+      </div>
+      <div class="container_input">
+        <label for="contraseña" >Contraseña</label>
+        <input id="contraseña" type="password" class="input">
+      </div>
+      <div class="container_input">
+        <label for="confirmacion" >Confirme Contraseña</label>
+        <input id="confirmacion" type="password" class="input">
+      </div>
+      <div class="container_input container_input_sex">
+        <label class="sex-label">
+          <span>Masculino</span>
+          <input type="radio" name="sexo">
+          <span class="checkradio1"></span>
+        </label>
+        <label class="sex-label">
+          <span>Femenino</span>
+          <input type="radio" name="sexo">
+          <span class="checkradio2"></span>
+        </label>
+      </div>
+      <div class="container_input">
+        <label for="email" >Email</label>
+        <input id="email" type="text" class="input">
+      </div>
+      <div class="container_input">
+        <label for="numero" >Número</label>
+        <input id="numero" type="text" class="input">
+      </div>
+      <div class="container_input">
+        <label for="direccion" >Dirección</label>
+        <input id="direccion" type="text" class="input">
+      </div>
+      <div class="container_input terms">
+        <label class="label-terms">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <p>Acepto los términos y condiciones</p>
+      </div>
+      <div class="container_input">
+        <input type="submit" value="Registro" class="btn">
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
